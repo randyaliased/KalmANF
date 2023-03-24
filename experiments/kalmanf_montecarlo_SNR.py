@@ -5,15 +5,15 @@ Created on Fri Jan 13 07:24:15 2023
 
 Monte Carlo for analysing the performance of Adaptive Notch Filters using simulated data
 We will set up a sinusoidal signal + random gaussian noise and average over several runs.
+In this script we analyze the performance in terms of SNR and rho
 
 @author: randallali
 """
-
+import sys
+sys.path.append('../')
 import numpy as np 
-from scipy import signal
 from matplotlib import pyplot as plt
 import adaptive_notch_filters as anf
-import soundfile as sf
 from tqdm import tqdm
 import tikzplotlib
 
@@ -145,7 +145,7 @@ ax.legend()
 # ax.grid()
 # ax.legend()
 
-# tikzplotlib.save("./Fig_SNR/Norm_Mis_FigSNR.tex")
+# tikzplotlib.save("../results/Fig_SNR/Norm_Mis_FigSNR.tex")
 
 # Uncomment to see the actual frequency
 # fig, ax = plt.subplots()
@@ -160,7 +160,7 @@ ax.legend()
 
 # #%
 # # Write Text file with the Simulation parameters used
-# with open ('./Fig_SNR/KalmANF_MonteCarlo_Sim_Parameters.txt', 'w') as file:  
+# with open ('../results/Fig_SNR/KalmANF_MonteCarlo_Sim_Parameters.txt', 'w') as file:  
 #     file.write('Simulation Parameters used to generate Figure')
 #     file.write('\n')  
 #     file.write('\n') 

@@ -8,12 +8,11 @@ We will set up a sinusoidal signal + random gaussian noise and average over seve
 
 @author: randallali
 """
-
+import sys
+sys.path.append('../')
 import numpy as np 
-from scipy import signal
 from matplotlib import pyplot as plt
 import adaptive_notch_filters as anf
-import soundfile as sf
 from tqdm import tqdm
 import tikzplotlib
 
@@ -86,7 +85,7 @@ ax.grid()
 ax.legend()
 
 # tikzplotlib.save("./Fig1/Norm_Mis_Fig1.tex")
-## plt.savefig('./Fig1/Norm_Mis_Fig1.pdf') 
+plt.savefig('../results/Fig1/Norm_Mis_Fig1.pdf') 
 
 # # Uncomment to see the actual frequency
 # fig, ax = plt.subplots()
@@ -100,7 +99,7 @@ ax.legend()
 
 #%
 # Write Text file with the Simulation parameters used
-with open ('./Fig1/KalmANF_MonteCarlo_Sim_Parameters.txt', 'w') as file:  
+with open ('../results/Fig1/KalmANF_MonteCarlo_Sim_Parameters.txt', 'w') as file:  
     file.write('Simulation Parameters used to generate Figure')
     file.write('\n')  
     file.write('\n') 
