@@ -1,0 +1,10 @@
+Simulation Parameters used to generate Figure
+
+Rho (pole radius) = 0.93
+
+LMS Parameters: 
+mu (step size) = 0.005
+
+KalmANF Parameters: 
+q (process noise covaraince) = 0.0005
+r (measurement noise covariance) = 10

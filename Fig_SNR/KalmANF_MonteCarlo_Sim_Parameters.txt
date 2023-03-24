@@ -1,0 +1,14 @@
+Simulation Parameters used to generate Figure
+
+Number of Monte Carlo Runs = 100 
+SNR = [-5, 0, 5, 10, 15]dB 
+Rho Large (pole radius) = 0.95
+Rho Small (pole radius) = 0.6
+
+LMS Parameters: 
+mu (step size) = 0.001
+
+KalmANF Parameters: 
+q_large (process noise covaraince) = [0.0001, 4.5e-05, 2.5e-05, 1.9e-05, 1.7e-05]
+q_small (process noise covaraince) = [4e-05, 2.5e-05, 2e-05, 2e-05, 2e-05]
+r (measurement noise covariance) = 10

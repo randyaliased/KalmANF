@@ -1,0 +1,65 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=0.8, draw opacity=1, text opacity=1, draw=lightgray204},
+tick align=outside,
+tick pos=left,
+x grid style={darkgray176},
+xlabel={SNR (dB)},
+xmajorgrids,
+xmin=-6, xmax=16,
+xtick style={color=black},
+y grid style={darkgray176},
+ylabel={Averaged Steady State Normalised Misalignment (dB)},
+ymajorgrids,
+ymin=-78.6995520574766, ymax=-10.2022607279173,
+ytick style={color=black}
+]
+\addplot [semithick, steelblue31119180, mark=*, mark size=3, mark options={solid}]
+table {%
+-5 -36.084491847374
+0 -41.5259631238784
+5 -46.484861977432
+10 -51.5288879499271
+15 -56.4732555025166
+};
+\addlegendentry{LMS ANF, rho = 0.95}
+\addplot [semithick, darkorange25512714, mark=x, mark size=3, mark options={solid}]
+table {%
+-5 -46.4822237279519
+0 -55.7156051614414
+5 -63.6198930155498
+10 -70.0230499545496
+15 -75.5860388152239
+};
+\addlegendentry{KalmANF, rho = 0.95}
+\addplot [semithick, forestgreen4416044, dashed, mark=*, mark size=3, mark options={solid}]
+table {%
+-5 -13.3309830883034
+0 -22.4737151169076
+5 -32.0432407735711
+10 -41.8387212130994
+15 -51.8461266094924
+};
+\addlegendentry{LMS ANF, rho = 0.6}
+\addplot [semithick, crimson2143940, dashed, mark=x, mark size=3, mark options={solid}]
+table {%
+-5 -13.31577397017
+0 -22.4672236175968
+5 -32.036956826615
+10 -41.835557003953
+15 -51.8378312599768
+};
+\addlegendentry{KalmANF, rho = 0.6}
+\end{axis}
+
+\end{tikzpicture}
