@@ -3,7 +3,9 @@
 """
 Created on Fri Jan 13 07:24:15 2023
 
-Main script for analysing the performance of Adaptive Notch Filters
+Main script for analysing the performance of Adaptive Notch Filters used in the following work:
+R. Ali, T. van Waterschoot, "A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter", 
+Proceedings of the 26th International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, September 2023
 
 @author: randallali
 """

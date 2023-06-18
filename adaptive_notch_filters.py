@@ -5,6 +5,9 @@ Created on Fri Jan 13 07:25:00 2023
 
 @author: randallali
 
+See: R. Ali, T. van Waterschoot, "A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter", 
+     Proceedings of the 26th International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, September 2023
+
 This script contains the function definitions for:
     1. LMS adaptive notch filter
     2. Proposed Kalman adaptive notch filter (KalmANF)
@@ -47,7 +50,7 @@ def lms (y, fs, rho, mu):
         a_lms[n] = a_lms[n-1] + 2*mu*e_lms[n]*s_lms[n-1]
     
         if (a_lms[n] > 2) or (a_lms[n] < -2):
-            print(a_lms[n])
+            print('a = '+str(a_lms[n])+ ' is out of range, resetting to 0')
             a_lms[n] = 0 # reset coefficient if a is out of range to compute acos
 
         omega_hat_lms = np.arccos(a_lms[n]/2)
@@ -61,6 +64,7 @@ def kalmanf (y, fs, rho, q, r):
     '''
     Kalman-Based Adaptive Notch Filter (KalmANF)
     
+
     Input arguments:
         y       - input data vector (Lx1)
         fs      - sampling frequency (Hz)
@@ -102,7 +106,7 @@ def kalmanf (y, fs, rho, q, r):
         
         # Compute frequency
         if (a_kal[n] > 2) or (a_kal[n] < -2):
-            print(a_kal[n])
+            print('a = '+str(a_kal[n])+ ' is out of range, resetting to 0')
             a_kal[n] = 0 # reset coefficient if a is out of range to compute acos
         
         omega_hat_kal = np.arccos(a_kal[n]/2)
