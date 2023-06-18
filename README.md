@@ -7,7 +7,7 @@ The frequency trackers in this repo. are specifically based on updating a single
 
 Details of the frequency trackers can be found in the following paper:
 
-R. Ali, T. van Waterschoot, "[A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter] (https://ftp.esat.kuleuven.be/pub/SISTA/rali/Reports/23-57.pdf)", accepted for Proceedings of the 26th International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, September 2023.
+R. Ali, T. van Waterschoot, "[A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter](https://ftp.esat.kuleuven.be/pub/SISTA/rali/Reports/23-57.pdf)", accepted for Proceedings of the 26th International Conference on Digital Audio Effects (DAFx23), Copenhagen, Denmark, September 2023.
 
 The repo. also contains the experiments to regenerate the figures from this paper.
 
