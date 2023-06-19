@@ -1,4 +1,4 @@
-### A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter (KalmANF)
+### KalmANF: A frequency tracker based on a Kalman filter update of a single parameter adaptive notch filter 
  
 
 A particular class of frequency trackers are based on updating a single parameter in a constrained biquad filter configured as a notch filter.  Such an update can be done using a least mean square (LMS) algorithm, or a Kalman filter update, which turns out to be a regularized normalized least mean square algorithm with an optimal regularization parameter, the details of which are discussed in the following paper:
